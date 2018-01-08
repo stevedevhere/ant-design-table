@@ -1,8 +1,6 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import RcTable from 'rc-table';
-import {cx, css, injectGlobal} from 'react-emotion';
+import {css} from 'react-emotion';
 
 
 
@@ -58,10 +56,6 @@ const prefixCls = css`
 
 
 export default class Table extends React.Component {
-  // static propTypes = {
-  //   dataSource: PropTypes.array.isRequired,
-  //   columns: PropTypes.array.isRequired,
-  // }
 
   render() {
     const {
