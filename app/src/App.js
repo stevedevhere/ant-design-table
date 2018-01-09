@@ -25,7 +25,8 @@ class App extends React.Component {
           <Table
             dataSource={dataSourceWithFixed}
             columns={columnsWithFixed}
-            wrapperWidth="700px"/>
+            wrapperWidth="700px"
+            />
         </Wrapper>
     );
   }

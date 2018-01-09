@@ -15,7 +15,7 @@ const tableStyle = props => css`
     : props.fixed === 'right'
     ? 'right: 0;' : ''}
   ` : ''}
-`
+`;
 
 const tdStyles = props => css`
   text-align: left;
@@ -25,8 +25,8 @@ const tdStyles = props => css`
     ? `
       min-width: ${props.width}px
     ` : ''}
-    
-  ${props.fixed ? 'color: white;' : ''}
+  ${console.log(props)}
+  ${props.fixed ? `background: #fafafa;` : ''}
 `;
 
 const trStyles = props => css`

@@ -17,13 +17,16 @@ export default class Table extends React.Component {
       return data.map((item, index) => {
         return (
           <Tr key={uuid.v4()}>
-            { columns.map((column, index) => <Td key={uuid.v4()}>
-              {
-                !column.render
-                  ? item[column.dataIndex]
-                  : column.render()
-              }
-            </Td>) }
+            { columns.map((column, index) => (
+              <Td key={uuid.v4()}
+                fixed={!!column.fixed}>
+                {
+                  !column.render
+                    ? item[column.dataIndex]
+                    : column.render()
+                }
+              </Td>
+          )) }
           </Tr>
           )
         }
@@ -34,7 +37,8 @@ export default class Table extends React.Component {
           <Tr key={uuid.v4()}>
             {this.props.columns.map((column, index) => {
               return (
-                <Td key={uuid.v4()} fixed={!!column.fixed} width={column.width}>{
+                <Td key={uuid.v4()}
+                  fixed={!!column.fixed} width={column.width}>{
                   !column.render
                     ? item[column.dataIndex]
                     : column.render()
