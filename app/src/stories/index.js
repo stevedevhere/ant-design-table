@@ -12,6 +12,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
 storiesOf('Table', module)
   .add('Default', () => <Table dataSource={dataSource} columns={columns} />)
-  .add('With fixed columns', () => <Table dataSource={dataSourceWithFixed} columns={columnsWithFixed} />);
+  .add('With fixed columns & withou fixed width', () => <Table dataSource={dataSourceWithFixed} columns={columnsWithFixed}/>)
+  .add('With fixed columns & fixed width', () => <Table dataSource={dataSourceWithFixed} columns={columnsWithFixed} wrapperWidth="700px"/>)
 
 
