@@ -54,31 +54,37 @@ export const columnsWithFixed = [
     title: 'Age',
     dataIndex: 'age',
     key: 'age',
+    fixed: 'left',
   }, {
     title: 'Address1',
     dataIndex: 'address1',
     key: 'address1',
+    width: 150,
   }, {
     title: 'Address2',
     dataIndex: 'address2',
     key: 'address2',
+    width: 150,
   }, {
     title: 'Address3',
     dataIndex: 'address3',
     key: 'address3',
+    width: 150,
   }, {
     title: 'Address4',
     dataIndex: 'address4',
     key: 'address4',
+    width: 150,
   }, {
     title: 'Address5',
     dataIndex: 'address5',
     key: 'address5',
-  },
-  {
+    width: 150,
+  }, {
     title: 'Action',
     key: 'operation',
     width: 100,
+    fixed: 'right',
     render: () => <a href="#/">action</a>,
   },
 ];
