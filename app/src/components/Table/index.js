@@ -1,9 +1,6 @@
 import React from 'react';
 import styled, {css} from 'react-emotion';
 
-import { columns } from '../../constants/data';
-
-
 const tableStyle = props => css`
   border-collapse: collapse;
   font-family: Tahoma, Arial;
@@ -50,7 +47,7 @@ const headerStyles = css`
 `;
 
 const Container = styled('div')(props => css`
-  width: ${props.width ? props.width : '100%'};
+  ${props.width ? `width: ${props.width}` : 'display: table;'}
   position: relative;
 `);
 

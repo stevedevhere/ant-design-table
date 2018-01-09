@@ -1,9 +1,8 @@
 import React from 'react';
 import {injectGlobal} from 'emotion';
-import styled from 'react-emotion';
 
 import Table from './components/Table';
-import { dataSource, columns, columnsWithFixed, dataSourceWithFixed } from './constants/data';
+import { columnsWithFixed, dataSourceWithFixed } from './constants/data';
 
 injectGlobal`
   body {
