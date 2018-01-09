@@ -1,4 +1,4 @@
-import {css} from 'react-emotion';
+import { css } from 'react-emotion';
 
 const tableStyle = props => css`
   border-collapse: collapse;
@@ -10,10 +10,8 @@ const tableStyle = props => css`
   ${props.fixed ? `
     position: absolute;
     top: 0;
-    ${props.fixed === 'left'
-    ? 'left: 0;'
-    : props.fixed === 'right'
-    ? 'right: 0;' : ''}
+    ${props.fixed === 'left' ? 'left: 0;' : ''}
+    ${props.fixed === 'right' ? 'right: 0;' : ''}
   ` : ''}
 `;
 
@@ -21,12 +19,11 @@ const tdStyles = props => css`
   text-align: left;
   padding: 16px; 
   background: #fff;
-  ${props.width 
+  ${props.width
     ? `
-      min-width: ${props.width}px
+      min-width: ${props.width}px;
     ` : ''}
-  ${console.log(props)}
-  ${props.fixed ? `background: #fafafa;` : ''}
+  ${props.fixed ? 'background: #fafafa;' : ''}
 `;
 
 const trStyles = props => css`
@@ -58,8 +55,8 @@ const headerStyles = css`
 `;
 
 const ContainerStyles = props => css`
-${props.width ? `width: ${props.width}` : 'display: table;'}
-position: relative;
+  ${props.width ? `width: ${props.width}` : 'display: table;'}
+  position: relative;
 `;
 
 const mainContainerStyle = props => css`
@@ -75,4 +72,4 @@ export default ({
   trStyles,
   tdStyles,
   tableStyle,
-})
+});

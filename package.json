@@ -10,6 +10,9 @@
     "react-dom": "^16.2.0",
     "react-emotion": "^8.0.12",
     "react-scripts": "1.0.17",
+    "@storybook/addon-actions": "^3.3.6",
+    "@storybook/addon-links": "^3.3.6",
+    "@storybook/react": "^3.3.6",
     "uuid": "^3.1.0"
   },
   "scripts": {
@@ -21,9 +24,6 @@
     "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.6",
-    "@storybook/addon-links": "^3.3.6",
-    "@storybook/react": "^3.3.6",
     "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",

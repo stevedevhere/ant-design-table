@@ -1,10 +1,11 @@
 import React from 'react';
-import {injectGlobal} from 'emotion';
+import { injectGlobal } from 'emotion';
 import styled from 'react-emotion';
 
 import Table from './components/Table';
 import { columnsWithFixed, dataSourceWithFixed } from './constants/data';
 
+// eslint-disable-next-line
 injectGlobal`
   body {
     margin: 0;
@@ -15,21 +16,16 @@ injectGlobal`
 const Wrapper = styled('div')`
   margin: 7% auto;
   display: table;
+`;
 
-`
-
-class App extends React.Component {
-  render() {
-    return (
-        <Wrapper>
-          <Table
-            dataSource={dataSourceWithFixed}
-            columns={columnsWithFixed}
-            wrapperWidth="700px"
-            />
-        </Wrapper>
-    );
-  }
-}
+const App = props => ( // eslint-disable-line
+  <Wrapper>
+    <Table
+      dataSource={dataSourceWithFixed}
+      columns={columnsWithFixed}
+      wrapperWidth="700px"
+    />
+  </Wrapper>
+);
 
 export default App;
