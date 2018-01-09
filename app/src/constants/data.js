@@ -179,6 +179,7 @@ export const columns = [
     title: 'Address',
     dataIndex: 'address',
     key: 'address',
+    width: 150,
   },
   {
     title: 'Action',

@@ -2,7 +2,8 @@ import {css} from 'react-emotion';
 
 const tableStyle = props => css`
   border-collapse: collapse;
-  font-family: monospace;
+  font-family: Helvetica;
+  font-weight: 300;
   * {
     margin: 0;
   }
@@ -31,12 +32,11 @@ const tdStyles = props => css`
 const trStyles = props => css`
   border-bottom: 1px solid #e8e8e8;
 
-  // &:hover td {
-  //   background: #e6f7ff;
-  // }
-
   a {
     text-decoration: none;
+    color: #1890ff;
+    text-align: center;
+    padding-left: 5px;
   }
 
   ${props.fixed ? `
@@ -44,7 +44,7 @@ const trStyles = props => css`
     top: 0;
     z-index: 999;
     left: 0;
-  ` : 'overflow: auto;'} 
+  ` : ''} 
 `;
 
 const headerStyles = css`
@@ -52,6 +52,8 @@ const headerStyles = css`
   text-align: left;
   th {
     padding: 16px;
+    background: #fafafa;
+    border-bottom: solid 1px #ececec;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {injectGlobal} from 'emotion';
+import styled from 'react-emotion';
 
 import Table from './components/Table';
 import { columnsWithFixed, dataSourceWithFixed } from './constants/data';
@@ -11,13 +12,21 @@ injectGlobal`
   }
 `;
 
+const Wrapper = styled('div')`
+  margin: 7% auto;
+  display: table;
+
+`
+
 class App extends React.Component {
   render() {
     return (
-        <Table
-          dataSource={dataSourceWithFixed}
-          columns={columnsWithFixed}
-          wrapperWidth="700px"/>
+        <Wrapper>
+          <Table
+            dataSource={dataSourceWithFixed}
+            columns={columnsWithFixed}
+            wrapperWidth="700px"/>
+        </Wrapper>
     );
   }
 }

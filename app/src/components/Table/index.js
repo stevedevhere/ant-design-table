@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {css} from 'react-emotion';
 import uuid from 'uuid';
 import styles from './styles';
+import {findDOMNode} from 'react-dom';
 
 const Td = styled('td')(styles.tdStyles);
 const Tr = styled('tr')(styles.trStyles);
@@ -10,6 +11,7 @@ const TableContainer = styled('table')(styles.tableStyle);
 const MainContainer = styled('div')(styles.mainContainerStyle);
 
 export default class Table extends React.Component {
+
   renderItems(data, columns) {
     if(data && columns) {
       return data.map((item, index) => {
@@ -18,8 +20,8 @@ export default class Table extends React.Component {
             { columns.map((column, index) => <Td key={uuid.v4()}>
               {
                 !column.render
-                      ? item[column.dataIndex]
-                      : column.render()
+                  ? item[column.dataIndex]
+                  : column.render()
               }
             </Td>) }
           </Tr>
@@ -46,6 +48,8 @@ export default class Table extends React.Component {
   }
 
   getFixedDataByDirection(direction) {
+    this.count++;
+
     const columns = this.props.columns.filter(column => column.fixed === direction);
 
     const data = this.props.dataSource.map((item, index) => {
